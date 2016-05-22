@@ -50,9 +50,17 @@ public abstract class OnRecycleItemClickListener implements RecyclerView.OnItemT
         @Override
         public void onLongPress(MotionEvent e) {
             super.onLongPress(e);
+            View item = mRecyclerView.findChildViewUnder(e.getX(), e.getY());
+            if (item != null) {
+                RecyclerView.ViewHolder childViewHolder = mRecyclerView.getChildViewHolder(item);
+                onItemLongClick(childViewHolder);
+            }
+
         }
     }
     //条目点击回调接口
     public abstract void onItemClick(RecyclerView.ViewHolder vh);
+    //条目长按事件
+    public abstract void onItemLongClick(RecyclerView.ViewHolder vh);
 
 }
