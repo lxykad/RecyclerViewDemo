@@ -13,6 +13,10 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.Collections;
 
+
+/**
+ * @author lxy
+ */
 public class MainActivity extends AppCompatActivity {
 
     private ArrayList<String> mList;
@@ -39,8 +43,6 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(RecyclerView.ViewHolder vh) {
                 //position
                 int position = vh.getAdapterPosition();
-                //Toast.makeText(MainActivity.this,position+"",Toast.LENGTH_SHORT).show();
-                //
                 TextView tv = (TextView) vh.itemView.findViewById(R.id.tv_title);
                 String s = tv.getText().toString();
                 Toast.makeText(MainActivity.this, s, Toast.LENGTH_SHORT).show();

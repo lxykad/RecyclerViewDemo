@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lxy.recyclerview.ui.StartActivity">
+
+    <Button
+        android:id="@+id/mBtMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="main" />
+
+    <Button
+        android:id="@+id/mBtSecond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="second"
+        app:layout_constraintLeft_toRightOf="@+id/mBtMain" />
+
+</android.support.constraint.ConstraintLayout>
