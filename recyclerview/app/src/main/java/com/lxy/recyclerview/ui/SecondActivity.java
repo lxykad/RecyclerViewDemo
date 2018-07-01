@@ -45,6 +45,7 @@ public class SecondActivity extends AppCompatActivity {
     private void initEvents() {
         mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         mAdapter = new SecondAdapter(this, mList);
+        mRecyclerView.addItemDecoration(new SecondDecoration(10));
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mRecyclerView.setAdapter(mAdapter);
 
