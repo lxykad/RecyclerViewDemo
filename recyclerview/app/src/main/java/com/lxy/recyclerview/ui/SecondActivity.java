@@ -33,14 +33,14 @@ public class SecondActivity extends AppCompatActivity {
 
 
     private void initData() {
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < 30; i++) {
             SecondBean bean = new SecondBean();
             bean.name = "name: " + i;
             bean.type = i;
+
             mList.add(bean);
         }
     }
-
 
     private void initEvents() {
         mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);

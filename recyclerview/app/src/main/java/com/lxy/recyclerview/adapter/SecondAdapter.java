@@ -1,6 +1,7 @@
 package com.lxy.recyclerview.adapter;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -36,8 +37,16 @@ public class SecondAdapter extends RecyclerView.Adapter<SecondAdapter.SecondHold
     @Override
     public void onBindViewHolder(SecondHolder holder, int position) {
         SecondBean bean = mList.get(position);
-        holder.tvType.setText(String.valueOf(bean.type));
         holder.tvName.setText(bean.name);
+
+        if (bean.type % 5 == 0) {
+            holder.tvType.setVisibility(View.VISIBLE);
+            holder.tvType.setBackgroundColor(Color.parseColor("#39c6c1"));
+            holder.tvType.setText(String.valueOf(bean.type));
+        } else {
+            holder.tvType.setVisibility(View.GONE);
+        }
+
     }
 
     @Override
