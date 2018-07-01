@@ -66,4 +66,16 @@ public class SecondAdapter extends RecyclerView.Adapter<SecondAdapter.SecondHold
         }
     }
 
+    /**
+     * 判断该位置是否需要固定
+     *
+     * @param position
+     * @return
+     */
+    public boolean isPinnedPosition(int position) {
+        // return getItemViewType(position) == VIEW_TYPE_ITEM_TIME;
+        return position % 5 == 0;
+    }
+
+
 }
