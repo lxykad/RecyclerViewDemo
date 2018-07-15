@@ -97,11 +97,15 @@ public class SecondDecoration extends RecyclerView.ItemDecoration {
             // 当前可见的第一个item的position
             int firstVisiablePosition = parent.getChildAdapterPosition(firstView);
 
+            // 上一个悬浮位置
+            int pinnedHeaderPosition = getPinnedHeaderViewPosition(firstVisiablePosition, adapter);
+            mPinnedHeaderPosition = pinnedHeaderPosition;
+
             if (adapter.isPinnedPosition(firstVisiablePosition)) {
                 // 需要悬浮
                 RecyclerView.ViewHolder pinnedHeaderViewHolder = adapter.onCreateViewHolder(parent,
-                        adapter.getItemViewType(firstVisiablePosition));
-                adapter.onBindViewHolder((SecondAdapter.SecondHolder) pinnedHeaderViewHolder, firstVisiablePosition);
+                        adapter.getItemViewType(pinnedHeaderPosition));
+                adapter.onBindViewHolder((SecondAdapter.SecondHolder) pinnedHeaderViewHolder, pinnedHeaderPosition);
                 //要固定的view
                 View itemView = pinnedHeaderViewHolder.itemView;
                 ensurePinnedHeaderViewLayout(itemView, parent);

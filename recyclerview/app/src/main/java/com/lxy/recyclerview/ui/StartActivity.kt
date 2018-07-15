@@ -18,5 +18,11 @@ class StartActivity : AppCompatActivity() {
 
         var main = Intent(this, MainActivity::class.java)
         mBtMain.setOnClickListener { startActivity(main) }
+
+        var timeline = Intent(this, HTimeLineActivity::class.java);
+        mBtTimeLine.setOnClickListener { startActivity(timeline) }
+
+        var vh = Intent(this, ScrollRecyclerViewActivity::class.java);
+        mbtVH.setOnClickListener { startActivity(vh) }
     }
 }

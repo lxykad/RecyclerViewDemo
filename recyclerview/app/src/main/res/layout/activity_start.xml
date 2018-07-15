@@ -19,4 +19,17 @@
         android:text="second"
         app:layout_constraintLeft_toRightOf="@+id/mBtMain" />
 
+    <Button
+        android:id="@+id/mBtTimeLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TimeLine"
+        app:layout_constraintLeft_toRightOf="@+id/mBtSecond" />
+    <Button
+        android:id="@+id/mbtVH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="vh"
+        app:layout_constraintLeft_toRightOf="@+id/mBtTimeLine" />
+
 </android.support.constraint.ConstraintLayout>
